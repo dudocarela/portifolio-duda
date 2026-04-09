@@ -1,187 +1,97 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eduarda Soares | Portfólio</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Fonte elegante -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduarda Soares | Data Science Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="logo">Eduarda Soares</div>
-  <nav>
-    <a href="#home">Início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#contato">Contato</a>
-  </nav>
+    <div class="logo">Eduarda Soares</div>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#dashboard">Mercado</a>
+        <a href="#projetos">Projetos</a>
+    </nav>
 </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Transformando dados em insights e soluções inteligentes.</h1>
-    <p>
-      Estudante de Ciência de Dados focada em análise, visualização e desenvolvimento
-      de soluções baseadas em dados.
-    </p>
-    <a href="#projetos" class="btn">Ver Projetos</a>
-  </div>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Eduarda Soares de Paiva</h1>
+        <p class="subtitle">“Transformando dados em decisões inteligentes através de análise, visualização e tecnologia.”</p>
+        <div class="hero-btns">
+            <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+            <a href="#contato" class="btn btn-secondary">Contato</a>
+        </div>
+    </div>
 </section>
 
-<!-- SOBRE -->
-<section id="sobre" class="sobre">
-  <h2>Sobre Mim</h2>
-  <p>
-    Sou estudante de Ciência de Dados, com base inicial em Ciência da Computação,
-    área na qual iniciei minha trajetória acadêmica. Ao longo do tempo, descobri
-    minha afinidade com análise de dados, geração de insights e construção de
-    soluções inteligentes, o que motivou minha transição de curso.
-  </p>
-
-  <p>
-    Tenho interesse em dashboards, visualização de dados e tecnologias voltadas
-    à análise e tomada de decisão. Possuo perfil proativo, analítico e criativo,
-    com facilidade de aprendizado e adaptação a novos desafios.
-  </p>
-
-  <p>
-    Já desenvolvi projetos acadêmicos envolvendo organização, limpeza e análise
-    de dados, além da construção de soluções práticas voltadas ao ambiente tecnológico.
-  </p>
+<section id="sobre" class="reveal">
+    <h2>Sobre Mim</h2>
+    <div class="sobre-container">
+        <p>Sou estudante de Ciência de Dados com foco em análise, modelagem e visualização de dados. Busco transformar dados complexos em insights claros e estratégicos, auxiliando na tomada de decisões através de dashboards e ferramentas analíticas.</p>
+    </div>
 </section>
 
-<!-- HABILIDADES -->
-<section id="habilidades" class="habilidades">
-  <h2>Habilidades</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>📊 Dados</h3>
-      <ul>
-        <li>Análise de dados</li>
-        <li>Criação de dashboards</li>
-        <li>Visualização de dados</li>
-      </ul>
+<section id="skills" class="reveal">
+    <h2>Hard Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <span>Python</span>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill-item">
+            <span>SQL</span>
+            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill-item">
+            <span>Power BI</span>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
     </div>
-
-    <div class="card">
-      <h3>💻 Tecnologias</h3>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🎨 Outros</h3>
-      <ul>
-        <li>Design gráfico</li>
-        <li>Organização de projetos</li>
-        <li>Inglês intermediário</li>
-      </ul>
-    </div>
-
-  </div>
 </section>
 
-<!-- PROJETOS -->
-<section id="projetos" class="projetos">
-  <h2>Projetos</h2>
-
-  <div class="grid">
-
-    <!-- PROJETO 1 -->
-    <div class="card projeto">
-      <h3>Dashboard de Mercado de Tecnologia</h3>
-      <p>
-        Dashboard completo com análise de empregos na área de tecnologia,
-        apresentando insights sobre salários, cargos e demanda de habilidades.
-      </p>
-      <span>Python, Data Visualization</span>
-      <button>Ver Projeto</button>
+<section id="dashboard" class="reveal">
+    <h2>Insights: Mercado de Tech</h2>
+    <p>Análise de mais de 2.000 vagas para entender as tendências atuais.</p>
+    
+    <div class="kpi-grid">
+        <div class="kpi-card"><h3>+2.000</h3><p>Vagas Analisadas</p></div>
+        <div class="kpi-card"><h3>R$ 7.500</h3><p>Salário Médio</p></div>
+        <div class="kpi-card"><h3>65%</h3><p>Vagas Remotas</p></div>
+        <div class="kpi-card"><h3>85%</h3><p>Exigem Python</p></div>
     </div>
 
-    <!-- PROJETO 2 -->
-    <div class="card projeto">
-      <h3>Limpeza e Organização de Dados</h3>
-      <p>
-        Projeto focado na preparação de dados, incluindo tratamento de valores
-        ausentes, padronização e estruturação para análise.
-      </p>
-      <span>Data Cleaning</span>
-      <button>Ver Projeto</button>
+    <div class="chart-container">
+        <canvas id="salaryChart"></canvas>
     </div>
-
-    <!-- PROJETO 3 -->
-    <div class="card projeto">
-      <h3>Análise Exploratória (EDA)</h3>
-      <p>
-        Estudo detalhado de dados com identificação de padrões, tendências
-        e geração de insights relevantes.
-      </p>
-      <span>EDA</span>
-      <button>Ver Projeto</button>
+    
+    <div class="dashboard-explanation">
+        <p>Este dashboard demonstra a distribuição salarial e demandas técnicas. A análise permite identificar a alta valorização de profissionais que dominam Python e a flexibilidade do regime remoto no setor.</p>
     </div>
-
-    <!-- PROJETOS ACADÊMICOS -->
-    <div class="card projeto">
-      <h3>Portfólio Acadêmico</h3>
-      <p>Desenvolvimento de site pessoal com apresentação de projetos.</p>
-      <span>HTML, CSS, JS</span>
-      <button>Ver Projeto</button>
-    </div>
-
-    <div class="card projeto">
-      <h3>Projeto Universitário 2</h3>
-      <p>Projeto completo com aplicação prática de conceitos acadêmicos.</p>
-      <span>Web</span>
-      <button>Ver Projeto</button>
-    </div>
-
-    <div class="card projeto">
-      <h3>Simulador de Hotel</h3>
-      <p>Sistema de gerenciamento utilizando lógica de programação.</p>
-      <span>C</span>
-      <button>Ver Projeto</button>
-    </div>
-
-  </div>
 </section>
 
-<!-- DIFERENCIAL -->
-<section class="diferencial">
-  <h2>Diferenciais</h2>
-  <ul>
-    <li>Pensamento analítico</li>
-    <li>Proatividade</li>
-    <li>Facilidade de aprendizado</li>
-    <li>Foco em crescimento na área de dados</li>
-  </ul>
+<section id="projetos" class="reveal">
+    <h2>Projetos Selecionados</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-img"></div>
+            <h3>Análise de Churn</h3>
+            <p>Previsão de cancelamento de clientes utilizando Random Forest.</p>
+            <button class="btn-card">Ver Projeto</button>
+        </div>
+        </div>
 </section>
 
-<!-- CONTATO -->
-<section id="contato" class="contato">
-  <h2>Contato</h2>
-  <p>Email: contato@email.com</p>
-  <p>GitHub: github.com/seuusuario</p>
-  <p>LinkedIn: linkedin.com/in/seuusuario</p>
-</section>
-
-<!-- RODAPÉ -->
 <footer>
-  <p>© 2026 Eduarda Soares - Todos os direitos reservados</p>
+    <p>“Dados são o novo petróleo, mas apenas quando analisados se tornam valor.”</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
