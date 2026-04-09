@@ -4,49 +4,32 @@ window.onload = function() {
 
     const ctx = canvas.getContext('2d');
     
-    // Gradiente moderno para as barras
+    // Gradiente para as barras
     const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-    gradient.addColorStop(0, '#1A1A1A');
-    gradient.addColorStop(1, '#666666');
+    gradient.addColorStop(0, '#2B2B2B');
+    gradient.addColorStop(1, '#6A6A6A');
 
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Analista Jr', 'Cientista Pl', 'ML Engineer', 'Arquiteto de Dados'],
+            labels: ['Analista Jr', 'Cientista Pl', 'ML Engineer', 'Arquiteto'],
             datasets: [{
                 label: 'Salário Médio (BRL)',
                 data: [5800, 9500, 14200, 16500],
                 backgroundColor: gradient,
-                borderRadius: 12,
-                barThickness: 50,
-                maxBarThickness: 60
+                borderRadius: 8,
+                barThickness: 45
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-                legend: { display: false },
-                tooltip: {
-                    backgroundColor: '#1A1A1A',
-                    padding: 15,
-                    titleFont: { family: 'Plus Jakarta Sans', size: 14, weight: '800' },
-                    bodyFont: { family: 'Inter', size: 13 },
-                    cornerRadius: 8,
-                    displayColors: false
-                }
+                legend: { display: false }
             },
             scales: {
-                y: { 
-                    beginAtZero: true, 
-                    grid: { color: '#F0F0F0' },
-                    border: { display: false },
-                    ticks: { font: { family: 'Inter', size: 12 } }
-                },
-                x: { 
-                    grid: { display: false },
-                    ticks: { font: { family: 'Plus Jakarta Sans', weight: '700', size: 12 } }
-                }
+                y: { beginAtZero: true, grid: { color: '#F0F0F0' }, border: {display: false} },
+                x: { grid: { display: false } }
             }
         }
     });
