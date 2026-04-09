@@ -1,28 +1,58 @@
+// Aguarda o carregamento completo da página
 window.onload = function() {
-    const ctx = document.getElementById('salaryChart');
+    const canvas = document.getElementById('salaryChart');
     
-    if (ctx) {
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Data Analyst Jr', 'Data Scientist Pl', 'ML Engineer Sr', 'Data Architect'],
-                datasets: [{
-                    label: 'Salário Médio (BRL)',
-                    data: [5800, 9500, 14200, 16500],
-                    backgroundColor: ['#D6CFC7', '#A6A6A6', '#4A4A4A', '#1A1A1A'],
-                    borderRadius: 6
-                }]
+    // Se o canvas não existir, encerra para não dar erro
+    if (!canvas) {
+        console.error("Erro: O elemento 'salaryChart' não foi encontrado.");
+        return;
+    }
+
+    const ctx = canvas.getContext('2d');
+    
+    // Configuração do Gráfico de Barras
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Analista Júnior', 'Cientista Pleno', 'Eng. Machine Learning', 'Arquiteto de Dados'],
+            datasets: [{
+                label: 'Salário Médio Mensal (BRL)',
+                data: [5800, 9500, 14200, 16500],
+                backgroundColor: ['#D6CFC7', '#8A8A8A', '#4A4A4A', '#1A1A1A'],
+                borderRadius: 4,
+                barThickness: 'flex', // Ajusta automaticamente a largura
+                maxBarThickness: 50
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false, // OBRIGATÓRIO PARA RESPEITAR A ALTURA DO CSS
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: '#1A1A1A',
+                    titleFont: { family: 'Poppins', size: 14 },
+                    bodyFont: { family: 'Inter', size: 13 },
+                    padding: 15,
+                    displayColors: false
+                }
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: { beginAtZero: true }
+            scales: {
+                y: { 
+                    beginAtZero: true, 
+                    grid: { color: '#F0F0F0' },
+                    ticks: { 
+                        font: { family: 'Inter', size: 12 },
+                        callback: function(value) {
+                            return 'R$ ' + value.toLocaleString('pt-BR');
+                        }
+                    }
+                },
+                x: { 
+                    grid: { display: false },
+                    ticks: { font: { family: 'Poppins', weight: '600', size: 12 } }
                 }
             }
-        });
-        console.log("Gráfico carregado com sucesso!");
-    } else {
-        console.error("Erro: O elemento 'salaryChart' não foi encontrado.");
-    }
+        }
+    });
 };
