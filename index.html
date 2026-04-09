@@ -3,95 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduarda Soares | Data Science Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Eduarda Soares | Data Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
 
 <header>
     <div class="logo">Eduarda Soares</div>
     <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#skills">Skills</a>
         <a href="#dashboard">Mercado</a>
         <a href="#projetos">Projetos</a>
     </nav>
 </header>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>Eduarda Soares de Paiva</h1>
-        <p class="subtitle">“Transformando dados em decisões inteligentes através de análise, visualização e tecnologia.”</p>
-        <div class="hero-btns">
-            <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-            <a href="#contato" class="btn btn-secondary">Contato</a>
-        </div>
-    </div>
+    <h1>Eduarda Soares de Paiva</h1>
+    <p>Transformando dados em decisões inteligentes.</p>
+    <a href="#dashboard" class="btn">Ver Análises</a>
 </section>
 
-<section id="sobre" class="reveal">
-    <h2>Sobre Mim</h2>
-    <div class="sobre-container">
-        <p>Sou estudante de Ciência de Dados com foco em análise, modelagem e visualização de dados. Busco transformar dados complexos em insights claros e estratégicos, auxiliando na tomada de decisões através de dashboards e ferramentas analíticas.</p>
-    </div>
-</section>
-
-<section id="skills" class="reveal">
-    <h2>Hard Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-item">
-            <span>Python</span>
-            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-        </div>
-        <div class="skill-item">
-            <span>SQL</span>
-            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-        </div>
-        <div class="skill-item">
-            <span>Power BI</span>
-            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-        </div>
-    </div>
-</section>
-
-<section id="dashboard" class="reveal">
-    <h2>Insights: Mercado de Tech</h2>
-    <p>Análise de mais de 2.000 vagas para entender as tendências atuais.</p>
-    
-    <div class="kpi-grid">
-        <div class="kpi-card"><h3>+2.000</h3><p>Vagas Analisadas</p></div>
-        <div class="kpi-card"><h3>R$ 7.500</h3><p>Salário Médio</p></div>
-        <div class="kpi-card"><h3>65%</h3><p>Vagas Remotas</p></div>
-        <div class="kpi-card"><h3>85%</h3><p>Exigem Python</p></div>
-    </div>
-
-    <div class="chart-container">
+<section id="dashboard">
+    <h2>Market Insights</h2>
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin: auto;">
         <canvas id="salaryChart"></canvas>
     </div>
-    
-    <div class="dashboard-explanation">
-        <p>Este dashboard demonstra a distribuição salarial e demandas técnicas. A análise permite identificar a alta valorização de profissionais que dominam Python e a flexibilidade do regime remoto no setor.</p>
-    </div>
 </section>
-
-<section id="projetos" class="reveal">
-    <h2>Projetos Selecionados</h2>
-    <div class="grid">
-        <div class="card">
-            <div class="card-img"></div>
-            <h3>Análise de Churn</h3>
-            <p>Previsão de cancelamento de clientes utilizando Random Forest.</p>
-            <button class="btn-card">Ver Projeto</button>
-        </div>
-        </div>
-</section>
-
-<footer>
-    <p>“Dados são o novo petróleo, mas apenas quando analisados se tornam valor.”</p>
-</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="script.js"></script>
+<script src="script.js"></script> 
 </body>
 </html>
