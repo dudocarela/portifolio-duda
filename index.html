@@ -3,33 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduarda Soares | Data Science</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>Eduarda Soares | Data Science Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
 <header>
-    <div class="logo">Eduarda Soares</div>
-    <nav>
-        <a href="#dashboard">Mercado</a>
-        <a href="#projetos">Projetos</a>
-    </nav>
+    <div class="container header-flex">
+        <div class="logo">EDUARDA<span>SOARES</span></div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#skills">Skills</a>
+            <a href="#projeto-mercado">Projeto Destaque</a>
+        </nav>
+    </div>
 </header>
 
-<section class="hero">
-    <h1>Eduarda Soares de Paiva</h1>
-    <p>Transformando dados em decisões inteligentes.</p>
-    <a href="#dashboard" class="btn">Ver Análises</a>
-</section>
-
-<section id="dashboard">
-    <h2>Market Insights</h2>
-    <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin: auto;">
-        <canvas id="salaryChart"></canvas>
+<section class="hero container">
+    <div class="hero-text">
+        <span class="tag">Future Data Scientist</span>
+        <h1>Transformando dados em <br><span>decisões globais.</span></h1>
+        <p>Estudante de Ciência de Dados focada em modelagem preditiva e análise estratégica. Unindo tecnologia e visão de negócios para resolver problemas complexos com impacto internacional.</p>
+        <div class="hero-btns">
+            <a href="#projeto-mercado" class="btn btn-primary">Análise de Mercado</a>
+            <a href="#sobre" class="btn btn-secondary">Minha Jornada</a>
+        </div>
     </div>
 </section>
 
+<section id="sobre" class="container section-padding">
+    <div class="grid-two-cols">
+        <div class="sobre-info">
+            <span class="tag">Minha Essência</span>
+            <h2>Jornada, Modelagem e Ambição Global</h2>
+            <p>Iniciei minha trajetória na Ciência de Dados movida pela curiosidade intrínseca de entender como os números moldam o comportamento humano e os mercados. Atualmente, foco meus estudos em <strong>Ciência de Dados e Modelagem</strong>, mergulhando em estatística aplicada e algoritmos que traduzem grandes volumes de informação em clareza estratégica.</p>
+            <p>Sendo uma profissional jovem e resiliente, vejo minha idade como um acelerador: tenho a energia necessária para a inovação constante e a adaptação rápida que o campo de dados exige. Meu objetivo é construir uma carreira sólida que rompa fronteiras geográficas, focando no sonho de <strong>trabalhar no mercado internacional</strong>.</p>
+            <p>Acredito que os dados são a linguagem universal do século XXI. Meu foco está em dominar essa linguagem para impulsionar empresas globais, transformando insights complexos em valor real e escalável.</p>
+        </div>
+        <div class="sobre-stats">
+            <div class="stat-card"><h3>Global</h3><p>Mindset focado em projetos internacionais e atuação remota.</p></div>
+            <div class="stat-card"><h3>Análise</h3><p>Foco total em extração de valor e modelagem preditiva.</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="bg-light section-padding">
+    <div class="container">
+        <span class="tag center" style="display:block">Technical Stack</span>
+        <h2 class="center">Especialidades Técnicas (Hard Skills)</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-info"><span>Python (Pandas, Scikit-learn)</span><span>90%</span></div>
+                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-info"><span>SQL & Estruturação de Dados</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-info"><span>Data Viz (Power BI / Tableau)</span><span>95%</span></div>
+                <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-info"><span>Estatística & Machine Learning</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projeto-mercado" class="container section-padding">
+    <div class="project-story">
+        <span class="tag">Case Study: People Analytics & Market Trends</span>
+        <h2 class="title-large">Decifrando o Ecossistema Tech: Uma Abordagem Analítica sobre Empregabilidade e Renda</h2>
+        
+        <div class="story-grid">
+            <div class="story-content">
+                <h3>01. Introdução e Contexto</h3>
+                <p>No atual cenário de transformação digital, o mercado de tecnologia é frequentemente descrito como um oceano de oportunidades. No entanto, decisões de carreira não devem ser baseadas em suposições, mas em evidências. Este projeto mapeia as variáveis que regem a contratação e a remuneração no setor, focando em Data Science.</p>
+
+                <h3>02. O Problema e a Coleta</h3>
+                <p>A principal dor identificada foi a disparidade entre requisitos técnicos e realidade salarial. Utilizando um dataset com mais de <strong>2.000 registros</strong>, apliquei técnicas de limpeza e normalização para remover outliers e entender quais <em>hard skills</em> possuem maior correlação com a valorização financeira.</p>
+
+                <h3>03. Metodologia Aplicada</h3>
+                <p>A análise foi estruturada em três pilares: Análise Exploratória (EDA) para padrões de contratação; Segmentação por Senioridade; e Mapeamento Geográfico para validar o impacto do modelo Remote-First em vagas globais.</p>
+            </div>
+            
+            <div class="story-content">
+                <h3>04. Insights Extraídos</h3>
+                <p>Os dados revelaram que profissionais que combinam <strong>Python com SQL</strong> possuem uma média salarial 35% superior aos que dominam apenas visualização. Além disso, o modelo remoto é padrão em 65% das vagas de alto nível, eliminando fronteiras para talentos qualificados.</p>
+
+                <h3>05. Conclusão Estratégica</h3>
+                <p>A Ciência de Dados é o passaporte definitivo para a economia global. Este estudo reforça que o domínio técnico, aliado à capacidade de contar uma história com dados (storytelling), é o que permite a um profissional brasileiro atuar em projetos de impacto internacional com alta performance.</p>
+                <div class="project-highlights">
+                    <strong>Tecnologias:</strong> Python, Pandas, SQL, Statistics, Data Visualization.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-wrapper">
+        <div class="kpi-grid">
+            <div class="kpi-box">
+                <span class="kpi-title">Média Salarial</span>
+                <p class="kpi-value">R$ 7.500</p>
+                <p class="kpi-sub">Nível Junior/Pleno</p>
+            </div>
+            <div class="kpi-box">
+                <span class="kpi-title">Skill Dominante</span>
+                <p class="kpi-value">85%</p>
+                <p class="kpi-sub">Pedem Python</p>
+            </div>
+            <div class="kpi-box">
+                <span class="kpi-title">Modalidade</span>
+                <p class="kpi-value">65%</p>
+                <p class="kpi-sub">Vagas Remotas</p>
+            </div>
+        </div>
+
+        <div class="chart-container-main">
+            <h3>Distribuição Salarial por Cargo (Dataset 2024)</h3>
+            <canvas id="salaryChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<footer class="section-padding">
+    <div class="container center">
+        <p>“Dados são o novo petróleo, mas apenas quando analisados se tornam valor.”</p>
+        <p class="copyright">© 2024 Eduarda Soares - Data Science & Modeling.</p>
+    </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="script.js"></script> 
+<script src="script.js"></script>
 </body>
 </html>
