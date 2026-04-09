@@ -3,138 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduarda Soares | Data Science & Modeling</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <title>Eduarda Soares | Data Science & Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <div class="container header-flex">
+<header class="navbar">
+    <div class="container nav-content">
         <div class="logo">EDUARDA<span>SOARES</span></div>
         <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#skills">Skills</a>
-            <a href="#projeto-mercado">Projeto Destaque</a>
+            <a href="#sobre">Jornada</a>
+            <a href="#skills">Stack</a>
+            <a href="#projeto-mercado">Insights</a>
+            <a href="mailto:seuemail@gmail.com" class="nav-btn">Vamos Conversar?</a>
         </nav>
     </div>
 </header>
 
 <main>
     <section class="hero container">
-        <div class="hero-text">
-            <span class="tag">Formação em Ciência de Dados</span>
-            <h1>Transformando dados em <br><span>decisões globais.</span></h1>
-            <p>Estudante focada em modelagem preditiva e análise estratégica. Unindo tecnologia e visão de negócios para resolver problemas complexos com impacto internacional.</p>
-            <div class="hero-btns">
-                <a href="#projeto-mercado" class="btn btn-primary">Análise de Mercado</a>
-                <a href="#sobre" class="btn btn-secondary">Minha Jornada</a>
+        <div class="hero-inner">
+            <span class="eyebrow">Data Science & Statistical Modeling</span>
+            <h1>Transformando dados brutos em <br><span class="gradient-text">estratégia global.</span></h1>
+            <p class="hero-desc">Estudante de Ciência de Dados focada em modelagem preditiva e análise de mercado. Unindo rigor estatístico e visão de negócios para resolver problemas complexos em escala internacional.</p>
+            <div class="cta-group">
+                <a href="#projeto-mercado" class="btn btn-filled">Explorar Case Study</a>
+                <a href="#sobre" class="btn btn-outline">Minha Visão</a>
             </div>
         </div>
     </section>
 
-    <section id="sobre" class="container section-padding">
-        <div class="grid-two-cols">
-            <div class="sobre-info">
-                <span class="tag">Apresentação Profissional</span>
-                <h2>Jornada, Modelagem e Ambição Global</h2>
-                <p>Iniciei minha trajetória na Ciência de Dados movida pela curiosidade intrínseca de entender como os números moldam o comportamento humano e os mercados. Atualmente, foco meus estudos em <strong>Ciência de Dados e Modelagem</strong>, mergulhando em estatística aplicada e algoritmos que traduzem grandes volumes de informação em clareza estratégica.</p>
-                <p>Sendo uma profissional jovem e resiliente, vejo minha idade como um acelerador: tenho a energia necessária para a inovação constante e a adaptação rápida que o campo de dados exige. Meu objetivo é construir uma carreira sólida que rompa fronteiras geográficas, focando no sonho de <strong>trabalhar no mercado internacional</strong>.</p>
-                <p>Acredito que os dados são a linguagem universal do século XXI. Meu foco está em dominar essa linguagem para impulsionar empresas globais, transformando insights complexos em valor real e escalável.</p>
+    <section id="sobre" class="container section-spacer">
+        <div class="about-grid">
+            <div class="about-text">
+                <span class="tag">Minha Essência</span>
+                <h2 class="section-title">Ambição, Modelagem e o Sonho Global</h2>
+                <p>Minha jornada na Ciência de Dados começou com uma pergunta simples: <em>como podemos prever o amanhã usando os rastros de hoje?</em> Desde então, foco meus estudos em <strong>Ciência de Dados e Modelagem</strong>, dominando a arte de traduzir grandes volumes de dados em decisões claras.</p>
+                <p>Sou uma profissional da nova geração: resiliente, adaptável e movida por tecnologia. Minha meta é clara: <strong>conquistar o mercado internacional</strong>. Acredito que a análise de dados não possui fronteiras, e meu objetivo é colaborar com grandes ecossistemas globais de inovação.</p>
+                <p>Atualmente, utilizo estatística e programação para antecipar tendências, sempre com o foco em gerar valor real, seja no Brasil ou em qualquer lugar do mundo.</p>
             </div>
-            <div class="sobre-stats">
-                <div class="stat-card"><h3>Global</h3><p>Mindset focado em projetos internacionais e atuação remota.</p></div>
-                <div class="stat-card"><h3>Análise</h3><p>Foco total em extração de valor e modelagem preditiva.</p></div>
+            <div class="about-visual">
+                <div class="stat-box">
+                    <strong>MINDSET</strong>
+                    <h3>Foco Global</h3>
+                    <p>Preparada para atuar em projetos remotos e internacionais.</p>
+                </div>
+                <div class="stat-box">
+                    <strong>MODELAGEM</strong>
+                    <h3>Preditiva</h3>
+                    <p>Foco total em algoritmos de regressão e classificação.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="bg-light section-padding">
+    <section id="skills" class="bg-dark section-spacer">
         <div class="container">
-            <span class="tag center">Technical Stack</span>
-            <h2 class="title-center">Especialidades Técnicas (Hard Skills)</h2>
+            <div class="skills-header">
+                <span class="tag white">Tech Stack</span>
+                <h2 class="section-title white">Especialidades Técnicas</h2>
+            </div>
             <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-info"><span>Python (Pandas, Scikit-learn)</span><span>90%</span></div>
+                <div class="skill-card">
+                    <div class="skill-info"><span>Python (Pandas, Numpy, Scikit-learn)</span><span>90%</span></div>
                     <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info"><span>SQL & Estruturação de Dados</span><span>85%</span></div>
+                <div class="skill-card">
+                    <div class="skill-info"><span>SQL & Data Warehousing</span><span>85%</span></div>
                     <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info"><span>Data Viz (Power BI / Tableau)</span><span>95%</span></div>
+                <div class="skill-card">
+                    <div class="skill-info"><span>Power BI & Data Storytelling</span><span>95%</span></div>
                     <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info"><span>Estatística & Machine Learning</span><span>75%</span></div>
+                <div class="skill-card">
+                    <div class="skill-info"><span>Estatística Aplicada & ML</span><span>75%</span></div>
                     <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projeto-mercado" class="container section-padding">
-        <div class="project-story">
-            <span class="tag">Case Study</span>
-            <h2 class="title-large">Decifrando o Ecossistema Tech: Uma Abordagem Analítica sobre Empregabilidade e Renda</h2>
-            
-            <div class="story-grid">
-                <div class="story-content">
-                    <h3>01. Introdução e Contexto</h3>
-                    <p>No atual cenário de transformação digital, o mercado de tecnologia é frequentemente descrito como um oceano de oportunidades. No entanto, decisões de carreira não devem ser baseadas em suposições, mas em evidências. Este projeto mapeia as variáveis que regem a contratação e a remuneração no setor, focando em Data Science.</p>
+    <section id="projeto-mercado" class="container section-spacer">
+        <header class="project-header">
+            <span class="tag">Case Study Destaque</span>
+            <h2 class="title-large">Decifrando o Ecossistema Tech: Análise de Empregabilidade</h2>
+            <p class="project-intro">Uma análise profunda sobre as variáveis que regem a contratação e remuneração na área de dados em 2024.</p>
+        </header>
 
-                    <h3>02. O Problema e a Coleta</h3>
-                    <p>A principal dor identificada foi a disparidade entre requisitos técnicos e realidade salarial. Utilizando um dataset com mais de 2.000 registros, apliquei técnicas de limpeza e normalização para remover outliers e entender quais hard skills possuem maior correlação com a valorização financeira.</p>
-
-                    <h3>03. Metodologia Aplicada</h3>
-                    <p>A análise foi estruturada em três pilares: Análise Exploratória (EDA) para padrões de contratação; Segmentação por Senioridade; e Mapeamento Geográfico para validar o impacto do modelo Remote-First em vagas globais.</p>
+        <div class="narrative-wrapper">
+            <div class="narrative-col">
+                <div class="narrative-item">
+                    <h3>01. O Problema</h3>
+                    <p>A disparidade entre o que as empresas pedem e o que o mercado paga gera frustração. Utilizei um dataset de <strong>2.000 registros</strong> para mapear a realidade financeira do setor.</p>
                 </div>
-                
-                <div class="story-content">
-                    <h3>04. Insights Extraídos</h3>
-                    <p>Os dados revelaram que profissionais que combinam Python com SQL possuem uma média salarial 35% superior aos que dominam apenas visualização. Além disso, o modelo remoto é padrão em 65% das vagas de alto nível, eliminando fronteiras para talentos qualificados.</p>
-
-                    <h3>05. Conclusão Estratégica</h3>
-                    <p>A Ciência de Dados é o passaporte definitivo para a economia global. Este estudo reforça que o domínio técnico, aliado à capacidade de contar uma história com dados (storytelling), é o que permite a um profissional brasileiro atuar em projetos de impacto internacional com alta performance.</p>
-                    <div class="project-highlights">
-                        <strong>Tecnologias:</strong> Python, Pandas, SQL, Statistics, Data Visualization.
-                    </div>
+                <div class="narrative-item">
+                    <h3>02. Metodologia</h3>
+                    <p>Apliquei Análise Exploratória (EDA) e limpeza de dados para remover outliers, focando na correlação entre ferramentas e salário médio.</p>
+                </div>
+            </div>
+            <div class="narrative-col">
+                <div class="narrative-item">
+                    <h3>03. Insights de Valor</h3>
+                    <p>Python e SQL são os maiores multiplicadores de renda. O trabalho remoto domina 65% das posições de alto nível, permitindo a atuação global.</p>
+                </div>
+                <div class="narrative-item featured">
+                    <h3>04. Conclusão</h3>
+                    <p>A Ciência de Dados é o passaporte para o mundo. Dominar a narrativa dos dados é o que diferencia um técnico de um estrategista de elite.</p>
                 </div>
             </div>
         </div>
 
-        <div class="dashboard-wrapper">
+        <div class="dashboard-container">
             <div class="kpi-grid">
-                <div class="kpi-box">
-                    <span class="kpi-title">Média Salarial</span>
-                    <p class="kpi-value">R$ 7.500</p>
-                    <p class="kpi-sub">Nível Junior/Pleno</p>
-                </div>
-                <div class="kpi-box">
-                    <span class="kpi-title">Skill Dominante</span>
-                    <p class="kpi-value">85%</p>
-                    <p class="kpi-sub">Pedem Python</p>
-                </div>
-                <div class="kpi-box">
-                    <span class="kpi-title">Modalidade</span>
-                    <p class="kpi-value">65%</p>
-                    <p class="kpi-sub">Vagas Remotas</p>
-                </div>
+                <div class="kpi-card"><strong>R$ 7.500</strong><span>Média Salarial Jr/Pl</span></div>
+                <div class="kpi-card"><strong>85%</strong><span>Python Requirement</span></div>
+                <div class="kpi-card"><strong>65%</strong><span>Remote-First</span></div>
             </div>
-
-            <div class="chart-container-main">
-                <h3>Distribuição Salarial por Cargo (Dataset 2024)</h3>
+            <div class="main-chart">
                 <canvas id="salaryChart"></canvas>
             </div>
         </div>
     </section>
 </main>
 
-<footer class="section-padding">
-    <div class="container center">
-        <p>“Dados são o novo petróleo, mas apenas quando analisados se tornam valor.”</p>
-        <p class="copyright">© 2024 Eduarda Soares - Data Science & Modeling.</p>
+<footer class="footer">
+    <div class="container footer-content">
+        <div class="footer-left">
+            <p>© 2024 Eduarda Soares. Projetado para impacto global.</p>
+        </div>
+        <div class="footer-right">
+            <p>Data Science & Modeling</p>
+        </div>
     </div>
 </footer>
 
