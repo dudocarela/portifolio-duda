@@ -1,4 +1,4 @@
-/* DESIGN TOKENS - PALETA ORIGINAL */
+/* DESIGN TOKENS */
 :root {
     --bg: #F9F7F2;
     --surface: #FFFFFF;
@@ -22,7 +22,7 @@ body {
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 40px; /* Margem lateral fixa para não grudar */
 }
 
 /* NAVBAR */
@@ -48,4 +48,44 @@ nav a { text-decoration: none; color: var(--text-main); margin-left: 30px; font-
 .eyebrow { display: block; text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); margin-bottom: 20px; }
 h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; font-weight: 800; letter-spacing: -2px; }
 .gradient-text { opacity: 0.6; font-weight: 300; }
-.
+.hero-desc { max-width: 600px; margin: 30px auto; font-size: 1.15rem; color: var(--text-muted); }
+.cta-group { display: flex; justify-content: center; gap: 20px; }
+
+.btn { padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+.btn-filled { background: var(--accent); color: white; }
+.btn-outline { border: 1px solid var(--border); color: var(--text-main); }
+.btn:hover { transform: scale(1.05); }
+
+/* SEÇÕES */
+.section-spacer { padding: 120px 0; }
+.section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; letter-spacing: -1px; margin-bottom: 30px; }
+
+/* ABOUT GRID */
+.about-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 100px; align-items: center; }
+.about-text p { margin-bottom: 25px; font-size: 1.1rem; color: var(--text-muted); text-align: justify; }
+.stat-box { background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid var(--border); margin-bottom: 20px; }
+.stat-box strong { display: block; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 10px; color: var(--text-muted); }
+
+/* PROJECT STORY */
+.project-header { margin-bottom: 60px; text-align: center; }
+.narrative-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; }
+.step { margin-bottom: 40px; }
+.step span { font-size: 0.8rem; font-weight: 800; color: var(--border); }
+.step h3 { font-family: 'Plus Jakarta Sans', sans-serif; margin: 10px 0; font-size: 1.2rem; }
+.step p { font-size: 0.95rem; color: var(--text-muted); }
+.highlighted { background: #EFECE5; padding: 30px; border-radius: 16px; }
+
+/* DASHBOARD CARD */
+.dashboard-card { background: var(--surface); padding: 60px; border-radius: 32px; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.03); }
+.kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; border-bottom: 1px solid var(--border); padding-bottom: 40px; margin-bottom: 40px; text-align: center; }
+.kpi strong { display: block; font-size: 2.5rem; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+.kpi span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+.chart-box { height: 350px; width: 100%; position: relative; }
+
+/* FOOTER */
+.footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+
+@media (max-width: 900px) {
+    .about-grid, .narrative-grid, .kpi-row { grid-template-columns: 1fr; gap: 40px; }
+    .container { padding: 0 25px; }
+}
