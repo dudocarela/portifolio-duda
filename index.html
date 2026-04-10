@@ -3,124 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duda Carela | Software Architecture & Data Science</title>
+    <title>Duda Carela | Software Engineer & Data Architect</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div id="particles-js"></div> <nav class="glass-nav">
-        <div class="nav-content">
-            <span class="logo mono">DUDA.LOG</span>
-            <div class="nav-links">
-                <a href="#dashboard">Analytics</a>
-                <a href="#projects">Projetos</a>
-                <a href="#skills">Skills</a>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">DUDA <span>CARELA</span></div>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#dashboard" class="nav-btn">Analytics</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-inner">
+            <span class="eyebrow">Engineering & Data Architecture</span>
+            <h1>Sistemas Robustos para <br><span class="gradient-text">Problemas Reais.</span></h1>
+            <p class="hero-desc">Desenvolvedor focado em escalabilidade, pipelines de dados massivos e arquitetura de software de alta performance.</p>
+            <div class="cta-group">
+                <a href="#projetos" class="btn btn-filled">Ver Projetos</a>
+                <a href="#dashboard" class="btn btn-outline">Análise de Dados</a>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <div class="container">
-        <header class="reveal">
-            <span class="badge">Sistemas de Alta Disponibilidade</span>
-            <h1 class="mono">ENGINEERING<br>PORTFOLIO</h1>
-            <div class="header-grid">
-                <p class="description">
-                    Especialista em arquitetura de dados e desenvolvimento full-stack. 
-                    Foco em transformar dados brutos em inteligência operacional.
-                </p>
-                <div class="terminal mono">
-                    <p>> dudadb --version: 2.1.0-stable</p>
-                    <p>> system_status: nominal</p>
-                    <p>> current_focus: distributed_systems</p>
+    <section id="dashboard" class="section-spacer">
+        <div class="container">
+            <h2 class="section-title">Data Analytics Dashboard</h2>
+            <div class="dashboard-card">
+                <div class="kpi-row">
+                    <div class="kpi">
+                        <strong>5.5k</strong>
+                        <span>Municípios Mapeados</span>
+                    </div>
+                    <div class="kpi">
+                        <strong>99.9%</strong>
+                        <span>Uptime Sentinel</span>
+                    </div>
+                    <div class="kpi">
+                        <strong>TB/mês</strong>
+                        <span>Dados Processados</span>
+                    </div>
+                </div>
+                
+                <div class="narrative-grid" style="margin-top: 40px; gap: 20px;">
+                    <div class="chart-box">
+                        <canvas id="ibgeChart"></canvas>
+                    </div>
+                    <div class="chart-box">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-box" style="height: 300px; margin-top: 20px;">
+                    <canvas id="salaryChart"></canvas>
                 </div>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <section id="dashboard" class="reveal">
-            <h2 class="section-title mono">01 // SISTEMA_METRICAS</h2>
-            <div class="dashboard">
-                <div class="chart-card">
-                    <p class="chart-label">COMPETÊNCIAS NÚCLEO</p>
-                    <canvas id="radarChart"></canvas>
-                </div>
-                <div class="chart-card">
-                    <p class="chart-label">LATÊNCIA DE RESPOSTA (MS)</p>
-                    <canvas id="lineChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="reveal">
-            <h2 class="section-title mono">02 // REPOSITORIOS_ATIVOS</h2>
+    <section id="projetos" class="section-spacer">
+        <div class="container">
+            <h2 class="section-title">Projetos de Engenharia</h2>
             
-            <div class="project-list">
-                <article class="project-node" data-category="data">
-                    <div class="node-header">
-                        <span class="node-tag">Big Data</span>
-                        <h3>Data Warehouse IBGE</h3>
+            <div class="project-header">
+                <div class="highlighted">
+                    <div class="step">
+                        <span>PROJETO 01 // DATA WAREHOUSE</span>
+                        <h3>IBGE: O Censo do Brasil em Dados Estruturados</h3>
+                        <p>Pipeline ETL que automatiza a extração da API SIDRA, tratando inconsistências e populando um DW PostgreSQL com suporte geoespacial (PostGIS) para análise de densidade urbana.</p>
                     </div>
-                    <p>Pipeline ETL automatizado que processa microdados do Censo para análise geoestatística em tempo real.</p>
-                    <div class="node-footer">
-                        <span class="tech">PySpark</span>
-                        <span class="tech">PostGIS</span>
-                        <span class="tech">Docker</span>
-                    </div>
-                </article>
-
-                <article class="project-node" data-category="ai">
-                    <div class="node-header">
-                        <span class="node-tag">Machine Learning</span>
-                        <h3>Hybrid RecSys Engine</h3>
-                    </div>
-                    <p>Motor de recomendação que utiliza filtragem colaborativa e NLP para resolver o problema de Cold Start.</p>
-                    <div class="node-footer">
-                        <span class="tech">FastAPI</span>
-                        <span class="tech">Scikit-Learn</span>
-                        <span class="tech">Redis</span>
-                    </div>
-                </article>
-
-                <article class="project-node" data-category="fullstack">
-                    <div class="node-header">
-                        <span class="node-tag">Full Stack</span>
-                        <h3>OmniStock SaaS</h3>
-                    </div>
-                    <p>ERP Preditivo com integração financeira e análise de séries temporais para previsão de estoque.</p>
-                    <div class="node-footer">
-                        <span class="tech">Next.js</span>
-                        <span class="tech">Prisma</span>
-                        <span class="tech">Stripe</span>
-                    </div>
-                </article>
-
-                <article class="project-node" data-category="core">
-                    <div class="node-header">
-                        <span class="node-tag">Low Level</span>
-                        <h3>DudaDB Core</h3>
-                    </div>
-                    <p>Motor de banco de dados relacional com implementação manual de B+Trees e persistência binária.</p>
-                    <div class="node-footer">
-                        <span class="tech">Rust</span>
-                        <span class="tech">Storage Engines</span>
-                    </div>
-                </article>
-
-                <article class="project-node" data-category="infra">
-                    <div class="node-header">
-                        <span class="node-tag">DevOps</span>
-                        <h3>Sentinel Monitor</h3>
-                    </div>
-                    <p>Monitoramento de telemetria em tempo real com alertas baseados em detecção de anomalias.</p>
-                    <div class="node-footer">
-                        <span class="tech">Go</span>
-                        <span class="tech">WebSockets</span>
-                        <span class="tech">InfluxDB</span>
-                    </div>
-                </article>
+                </div>
             </div>
-        </section>
-    </div>
+
+            <div class="narrative-grid">
+                <div class="step">
+                    <span>PROJETO 02 // MACHINE LEARNING</span>
+                    <h3>Motor de Recomendação Híbrido</h3>
+                    <p>Sistema funcional inspirado no Netflix. Combina Filtragem Colaborativa (comportamento) e Baseada em Conteúdo (NLP) para personalização de alta precisão em tempo real.</p>
+                </div>
+                <div class="step">
+                    <span>PROJETO 03 // FULL-STACK SAAS</span>
+                    <h3>OmniStock: Gestão Preditiva</h3>
+                    <p>SaaS completo Next.js com IA integrada para previsão de ruptura de estoque através de análise de séries temporais. Dashboard administrativo e pagamentos via Stripe.</p>
+                </div>
+                <div class="step">
+                    <span>PROJETO 04 // CORE SYSTEMS</span>
+                    <h3>DudaDB Core: Engine Relacional</h3>
+                    <p>Desenvolvimento de um banco de dados relacional em Rust. Implementação de B-Trees, gerenciamento de memória (buffer pool) e persistência binária customizada.</p>
+                </div>
+                <div class="step">
+                    <span>PROJETO 05 // INFRA & OPS</span>
+                    <h3>Sentinel: Telemetria em Tempo Real</h3>
+                    <p>Monitor de infraestrutura distribuída usando Go e WebSockets. Detecta anomalias de hardware em milissegundos através de análise estatística de fluxo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Duda Carela. Construído sob os princípios de performance e clareza.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
