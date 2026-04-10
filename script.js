@@ -1,79 +1,65 @@
-// Inicialização dos Gráficos
-document.addEventListener('DOMContentLoaded', () => {
-    initCharts();
-    handleScrollReveal();
-});
+window.onload = function() {
+    const commonOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { beginAtZero: true, grid: { color: '#F0F0F0' }, border: {display: false} },
+            x: { grid: { display: false } }
+        }
+    };
 
-function initCharts() {
-    const ctxRadar = document.getElementById('radarChart').getContext('2d');
-    const ctxLine = document.getElementById('lineChart').getContext('2d');
+    const setupGradient = (ctx) => {
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, '#2B2B2B');
+        gradient.addColorStop(1, '#6A6A6A');
+        return gradient;
+    };
 
-    // Estilo Global dos Gráficos
-    Chart.defaults.color = '#888';
-    Chart.defaults.font.family = 'JetBrains Mono';
-
-    new Chart(ctxRadar, {
-        type: 'radar',
+    // 1. Gráfico de Salários (O seu original)
+    const ctxSalary = document.getElementById('salaryChart').getContext('2d');
+    new Chart(ctxSalary, {
+        type: 'bar',
         data: {
-            labels: ['Eng. Dados', 'Backend', 'Sistemas', 'DevOps', 'Frontend'],
+            labels: ['Analista Jr', 'Cientista Pl', 'ML Engineer', 'Arquiteto'],
             datasets: [{
-                label: 'Score Técnico',
-                data: [95, 90, 85, 80, 70],
-                borderColor: '#00f2ff',
-                backgroundColor: 'rgba(0, 242, 255, 0.1)',
-                borderWidth: 2
+                data: [5800, 9500, 14200, 16500],
+                backgroundColor: setupGradient(ctxSalary),
+                borderRadius: 8,
+                barThickness: 45
             }]
         },
-        options: {
-            scales: { r: { grid: { color: '#222' }, angleLines: { color: '#222' }, ticks: { display: false } } },
-            plugins: { legend: { display: false } }
-        }
+        options: commonOptions
     });
 
-    new Chart(ctxLine, {
+    // 2. Gráfico IBGE (Distribuição)
+    const ctxIbge = document.getElementById('ibgeChart').getContext('2d');
+    new Chart(ctxIbge, {
+        type: 'doughnut',
+        data: {
+            labels: ['Sudeste', 'Sul', 'Nordeste', 'Centro-Oeste', 'Norte'],
+            datasets: [{
+                data: [42, 14, 27, 8, 9],
+                backgroundColor: ['#2B2B2B', '#4A4A4A', '#6A6A6A', '#8A8A8A', '#AAAAAA'],
+                borderWidth: 0
+            }]
+        },
+        options: { ...commonOptions, scales: {} } // Remove scales para doughnut
+    });
+
+    // 3. Gráfico de Performance (Latência)
+    const ctxPerf = document.getElementById('performanceChart').getContext('2d');
+    new Chart(ctxPerf, {
         type: 'line',
         data: {
-            labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+            labels: ['10:00', '12:00', '14:00', '16:00', '18:00'],
             datasets: [{
-                data: [20, 25, 45, 30, 22, 18],
-                borderColor: '#00f2ff',
-                tension: 0.4,
-                pointRadius: 0
+                data: [45, 42, 80, 38, 35],
+                borderColor: '#2B2B2B',
+                fill: false,
+                tension: 0.4
             }]
         },
-        options: {
-            scales: { x: { display: false }, y: { grid: { color: '#111' } } },
-            plugins: { legend: { display: false } }
-        }
+        options: commonOptions
     });
-}
-
-// Lógica de Revelação ao Rolar (Scroll Reveal)
-function handleScrollReveal() {
-    const reveals = document.querySelectorAll('.reveal');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    reveals.forEach(reveal => observer.observe(reveal));
-}
-
-// Efeito de Typing no terminal
-const terminal = document.querySelector('.terminal');
-let text = terminal.innerHTML;
-terminal.innerHTML = '';
-let i = 0;
-
-function typeWriter() {
-    if (i < text.length) {
-        terminal.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 5);
-    }
-}
-setTimeout(typeWriter, 500);
+};
