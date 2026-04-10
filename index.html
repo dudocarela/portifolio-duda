@@ -3,108 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduarda Soares | Data Science</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Duda Carela | Software Architecture & Data Science</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-<header class="navbar">
-    <div class="container nav-content">
-        <div class="logo">EDUARDA<span>SOARES</span></div>
-        <nav>
-            <a href="#sobre">Jornada</a>
-            <a href="#projeto-mercado">Insights</a>
-            <a href="#contato" class="nav-btn">Contato</a>
-        </nav>
-    </div>
-</header>
-
-<main>
-    <section class="hero container">
-        <div class="hero-inner">
-            <span class="eyebrow">Data Science & Modeling</span>
-            <h1>Extraindo valor de dados para <br><span class="gradient-text">impacto global.</span></h1>
-            <p class="hero-desc">Estudante focada em modelagem preditiva e análise estratégica. Unindo tecnologia e visão de negócios para resolver problemas complexos.</p>
-            <div class="cta-group">
-                <a href="#projeto-mercado" class="btn btn-filled">Explorar Projeto</a>
-                <a href="#sobre" class="btn btn-outline">Pespectiva</a>
+    <div id="particles-js"></div> <nav class="glass-nav">
+        <div class="nav-content">
+            <span class="logo mono">DUDA.LOG</span>
+            <div class="nav-links">
+                <a href="#dashboard">Analytics</a>
+                <a href="#projects">Projetos</a>
+                <a href="#skills">Skills</a>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <section id="sobre" class="container section-spacer">
-        <div class="about-grid">
-            <div class="about-text">
-                <h2 class="section-title">A Ambição por Trás dos Dados</h2>
-                <p>Iniciei minha trajetória impulsionada pela curiosidade em compreender como os números estruturam e influenciam mercados. Hoje, mergulho em <strong>Ciência de Dados e Modelagem</strong>, traduzindo caos em clareza estratégica.</p>
-                <p>Sendo jovem e resiliente, busco acelerar minha curva de aprendizado para alcançar meu sonho: <strong>atuar no mercado internacional</strong>, colaborando com centros globais de tecnologia.</p>
-            </div>
-            <div class="about-cards">
-                <div class="stat-box">
-                    <strong>GLOBAL</strong>
-                    <p>Mindset focado no exterior.</p>
-                </div>
-                <div class="stat-box">
-                    <strong>ANÁLISE</strong>
-                    <p>Foco em extração de valor.</p>
+    <div class="container">
+        <header class="reveal">
+            <span class="badge">Sistemas de Alta Disponibilidade</span>
+            <h1 class="mono">ENGINEERING<br>PORTFOLIO</h1>
+            <div class="header-grid">
+                <p class="description">
+                    Especialista em arquitetura de dados e desenvolvimento full-stack. 
+                    Foco em transformar dados brutos em inteligência operacional.
+                </p>
+                <div class="terminal mono">
+                    <p>> dudadb --version: 2.1.0-stable</p>
+                    <p>> system_status: nominal</p>
+                    <p>> current_focus: distributed_systems</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="projeto-mercado" class="container section-spacer project-reveal">
-        <header class="project-header">
-            <span class="eyebrow">Case Study</span>
-            <h2 class="project-title">Mercado Tech: Uma Abordagem Analítica sobre Empregabilidade</h2>
         </header>
 
-        <div class="narrative-grid">
-            <div class="narrative-col">
-                <div class="step">
-                    <span>01</span>
-                    <h3>Contexto e Problema</h3>
-                    <p>O mercado tech é vasto, mas confuso. Mapeei a disparidade entre requisitos técnicos e realidade salarial usando um dataset de 2.000 registros.</p>
+        <section id="dashboard" class="reveal">
+            <h2 class="section-title mono">01 // SISTEMA_METRICAS</h2>
+            <div class="dashboard">
+                <div class="chart-card">
+                    <p class="chart-label">COMPETÊNCIAS NÚCLEO</p>
+                    <canvas id="radarChart"></canvas>
                 </div>
-                <div class="step">
-                    <span>02</span>
-                    <h3>Metodologia</h3>
-                    <p>Apliquei EDA (Análise Exploratória) e normalização de dados para validar o impacto do modelo Remote-First no mundo.</p>
-                </div>
-            </div>
-            <div class="narrative-col">
-                <div class="step">
-                    <span>03</span>
-                    <h3>Insights Estratégicos</h3>
-                    <p>Profissionais com Python + SQL faturam 35% mais. O trabalho remoto domina 65% das vagas de alto nível, eliminando fronteiras.</p>
-                </div>
-                <div class="step highlighted">
-                    <h3>Conclusão</h3>
-                    <p>Dados são o passaporte para o mundo. O storytelling com dados é o que diferencia o profissional médio do talento de elite.</p>
+                <div class="chart-card">
+                    <p class="chart-label">LATÊNCIA DE RESPOSTA (MS)</p>
+                    <canvas id="lineChart"></canvas>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="dashboard-card">
-            <div class="kpi-row">
-                <div class="kpi"><strong>R$ 7.500</strong><span>Média Salarial</span></div>
-                <div class="kpi"><strong>85%</strong><span>Demanda Python</span></div>
-                <div class="kpi"><strong>65%</strong><span>Vagas Remotas</span></div>
-            </div>
-            <div class="chart-box">
-                <canvas id="salaryChart"></canvas>
-            </div>
-        </div>
-    </section>
-</main>
+        <section id="projects" class="reveal">
+            <h2 class="section-title mono">02 // REPOSITORIOS_ATIVOS</h2>
+            
+            <div class="project-list">
+                <article class="project-node" data-category="data">
+                    <div class="node-header">
+                        <span class="node-tag">Big Data</span>
+                        <h3>Data Warehouse IBGE</h3>
+                    </div>
+                    <p>Pipeline ETL automatizado que processa microdados do Censo para análise geoestatística em tempo real.</p>
+                    <div class="node-footer">
+                        <span class="tech">PySpark</span>
+                        <span class="tech">PostGIS</span>
+                        <span class="tech">Docker</span>
+                    </div>
+                </article>
 
-<footer class="footer">
-    <div class="container">
-        <p>© 2024 Eduarda Soares. Crafted for Impact.</p>
+                <article class="project-node" data-category="ai">
+                    <div class="node-header">
+                        <span class="node-tag">Machine Learning</span>
+                        <h3>Hybrid RecSys Engine</h3>
+                    </div>
+                    <p>Motor de recomendação que utiliza filtragem colaborativa e NLP para resolver o problema de Cold Start.</p>
+                    <div class="node-footer">
+                        <span class="tech">FastAPI</span>
+                        <span class="tech">Scikit-Learn</span>
+                        <span class="tech">Redis</span>
+                    </div>
+                </article>
+
+                <article class="project-node" data-category="fullstack">
+                    <div class="node-header">
+                        <span class="node-tag">Full Stack</span>
+                        <h3>OmniStock SaaS</h3>
+                    </div>
+                    <p>ERP Preditivo com integração financeira e análise de séries temporais para previsão de estoque.</p>
+                    <div class="node-footer">
+                        <span class="tech">Next.js</span>
+                        <span class="tech">Prisma</span>
+                        <span class="tech">Stripe</span>
+                    </div>
+                </article>
+
+                <article class="project-node" data-category="core">
+                    <div class="node-header">
+                        <span class="node-tag">Low Level</span>
+                        <h3>DudaDB Core</h3>
+                    </div>
+                    <p>Motor de banco de dados relacional com implementação manual de B+Trees e persistência binária.</p>
+                    <div class="node-footer">
+                        <span class="tech">Rust</span>
+                        <span class="tech">Storage Engines</span>
+                    </div>
+                </article>
+
+                <article class="project-node" data-category="infra">
+                    <div class="node-header">
+                        <span class="node-tag">DevOps</span>
+                        <h3>Sentinel Monitor</h3>
+                    </div>
+                    <p>Monitoramento de telemetria em tempo real com alertas baseados em detecção de anomalias.</p>
+                    <div class="node-footer">
+                        <span class="tech">Go</span>
+                        <span class="tech">WebSockets</span>
+                        <span class="tech">InfluxDB</span>
+                    </div>
+                </article>
+            </div>
+        </section>
     </div>
-</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
