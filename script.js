@@ -59,3 +59,37 @@ function analisarPerfil() {
 
   document.getElementById("resultadoPerfil").innerText = resultado;
 }
+
+// SIMULADOR NOVO
+const careerCanvas = document.getElementById('careerChart');
+
+if (careerCanvas) {
+    const ctx2 = careerCanvas.getContext('2d');
+
+    const careerData = [
+        [3000, 5000, 7000, 9000],
+        [4000, 7000, 10000, 13000],
+        [5000, 8000, 11000, 15000],
+        [6000, 9000, 13000, 17000]
+    ];
+
+    let careerChart = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['Júnior', 'Pleno', 'Sênior', 'Especialista'],
+            datasets: [{
+                data: careerData[0],
+                borderColor: '#2B2B2B',
+                tension: 0.4
+            }]
+        },
+        options: {
+            plugins: { legend: { display: false } }
+        }
+    });
+
+    document.getElementById("careerSelect").addEventListener("change", function () {
+        careerChart.data.datasets[0].data = careerData[this.value];
+        careerChart.update();
+    });
+}
