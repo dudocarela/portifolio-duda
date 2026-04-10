@@ -3,242 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duda Carela | Software Engineer & Data Architect</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <style>
-        :root {
-            --bg: #ffffff;
-            --surface: #f8f9fa;
-            --primary: #000000;
-            --secondary: #007bff;
-            --text: #1a1a1a;
-            --text-light: #666666;
-            --border: #e9ecef;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        /* Layout Organizado (Estilo ABNT Clean) */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        header {
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 40px;
-            margin-bottom: 60px;
-        }
-
-        h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; }
-        .subtitle { font-size: 1.2rem; color: var(--secondary); font-weight: 600; }
-
-        section { margin-bottom: 80px; }
-        h2 { font-size: 1.8rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* Dashboard de Gráficos (Power BI Style) */
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            background: var(--surface);
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-
-        .chart-box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .chart-box h4 { font-size: 0.9rem; margin-bottom: 15px; color: var(--text-light); text-align: center; }
-
-        /* Projetos Funcionais */
-        .projects-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .project-item {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 30px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .project-meta { font-weight: 600; font-size: 0.9rem; color: var(--secondary); }
-        .project-info h3 { font-size: 1.5rem; margin-bottom: 10px; }
-        .project-info p { color: var(--text-light); margin-bottom: 15px; }
-        
-        .tech-tags { display: flex; gap: 10px; flex-wrap: wrap; }
-        .tag { background: var(--surface); padding: 5px 12px; border-radius: 4px; font-size: 0.75rem; border: 1px solid var(--border); }
-
-        @media (max-width: 768px) {
-            .project-item { grid-template-columns: 1fr; }
-            h1 { font-size: 2.2rem; }
-        }
-
-        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--text-light); }
-    </style>
+    <title>Eduarda Soares | Data Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>DUDA CARELA</h1>
-        <p class="subtitle">Software Engineering & Data Architecture</p>
-        <p>Desenvolvendo soluções robustas que resolvem problemas reais através de código limpo e análise de dados estratégica.</p>
-    </header>
+<header class="navbar">
+    <div class="container nav-content">
+        <div class="logo">EDUARDA<span>SOARES</span></div>
+        <nav>
+            <a href="#sobre">Jornada</a>
+            <a href="#projeto-mercado">Insights</a>
+            <a href="#contato" class="nav-btn">Contato</a>
+        </nav>
+    </div>
+</header>
 
-    <section>
-        <h2>📊 Data Analytics Dashboard</h2>
-        <div class="dashboard-grid">
-            <div class="chart-box">
-                <h4>DISTRIBUIÇÃO DEMOGRÁFICA (IBGE)</h4>
-                <canvas id="ibgeChart"></canvas>
-            </div>
-            <div class="chart-box">
-                <h4>PERFORMANCE DO SISTEMA (LATÊNCIA)</h4>
-                <canvas id="performanceChart"></canvas>
-            </div>
-            <div class="chart-box">
-                <h4>CRESCIMENTO DE DADOS PROCESSADOS</h4>
-                <canvas id="growthChart"></canvas>
+<main>
+    <section class="hero container">
+        <div class="hero-inner">
+            <span class="eyebrow">Data Science & Modeling</span>
+            <h1>Extraindo valor de dados para <br><span class="gradient-text">impacto global.</span></h1>
+            <p class="hero-desc">Estudante focada em modelagem preditiva e análise estratégica. Unindo tecnologia e visão de negócios para resolver problemas complexos.</p>
+            <div class="cta-group">
+                <a href="#projeto-mercado" class="btn btn-filled">Explorar Projeto</a>
+                <a href="#sobre" class="btn btn-outline">Minha Visão</a>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>🛠️ Projetos Selecionados</h2>
-        <div class="projects-stack">
-            
-            <div class="project-item">
-                <div class="project-meta">01 / BIG DATA & ETL</div>
-                <div class="project-info">
-                    <h3>Data Warehouse Populacional (IBGE)</h3>
-                    <p>Pipeline automatizado que consome a API SIDRA, realiza o tratamento de milhões de registros e estruturou um banco PostgreSQL otimizado para consultas complexas de densidade urbana.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">ETL</span><span class="tag">PySpark</span>
-                    </div>
+    <section id="sobre" class="container section-spacer">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title">A Ambição por Trás dos Dados</h2>
+                <p>Iniciei minha trajetória movida pela curiosidade de entender como números moldam mercados. Hoje, mergulho em <strong>Ciência de Dados e Modelagem</strong>, traduzindo caos em clareza estratégica.</p>
+                <p>Sendo jovem e resiliente, busco acelerar minha curva de aprendizado para alcançar meu sonho: <strong>atuar no mercado internacional</strong>, colaborando com centros globais de tecnologia.</p>
+            </div>
+            <div class="about-cards">
+                <div class="stat-box">
+                    <strong>GLOBAL</strong>
+                    <p>Mindset focado no exterior.</p>
+                </div>
+                <div class="stat-box">
+                    <strong>ANÁLISE</strong>
+                    <p>Foco em extração de valor.</p>
                 </div>
             </div>
-
-            <div class="project-item">
-                <div class="project-meta">02 / MACHINE LEARNING</div>
-                <div class="project-info">
-                    <h3>Motor de Recomendação Híbrido</h3>
-                    <p>Sistema funcional de sugestão de conteúdo estilo Netflix. Utiliza Filtragem Colaborativa e análise de conteúdo (NLP) para personalização profunda de experiência do usuário.</p>
-                    <div class="tech-tags">
-                        <span class="tag">FastAPI</span><span class="tag">Scikit-Learn</span><span class="tag">Redis</span><span class="tag">Python</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-item">
-                <div class="project-meta">03 / FULL-STACK SaaS</div>
-                <div class="project-info">
-                    <h3>Gestão de Inventário Preditivo</h3>
-                    <p>Um SaaS completo com Dashboard administrativo e IA integrada para prever ruptura de estoque. Inclui sistema de pagamentos e autenticação multi-nível.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Prisma</span><span class="tag">Stripe</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-item">
-                <div class="project-meta">04 / CORE ENGINEERING</div>
-                <div class="project-info">
-                    <h3>DudaDB Core</h3>
-                    <p>Desenvolvimento de um banco de dados relacional literalmente do zero. Implementação de B-Trees para indexação e um sistema de persistência binária customizado.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Rust / C++</span><span class="tag">Binary Files</span><span class="tag">Data Structures</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-item">
-                <div class="project-meta">05 / INFRASTRUCTURE</div>
-                <div class="project-info">
-                    <h3>Sentinel: Real-time Monitor</h3>
-                    <p>Sistema de monitoramento de infraestrutura crítica com telemetria via WebSockets. Detecta picos de carga e falhas em milissegundos.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Go</span><span class="tag">WebSockets</span><span class="tag">Grafana API</span><span class="tag">Docker</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Duda Carela. Todos os projetos são funcionais e documentados.</p>
-    </footer>
-</div>
+    <section id="projeto-mercado" class="container section-spacer project-reveal">
+        <header class="project-header">
+            <span class="eyebrow">Case Study</span>
+            <h2 class="project-title">Mercado Tech: Uma Abordagem Analítica sobre Empregabilidade</h2>
+        </header>
 
-<script>
-    // Configurações Globais do Chart.js
-    Chart.defaults.font.family = 'Inter';
-    Chart.defaults.color = '#666';
+        <div class="narrative-grid">
+            <div class="narrative-col">
+                <div class="step">
+                    <span>01</span>
+                    <h3>Contexto e Problema</h3>
+                    <p>O mercado tech é vasto, mas confuso. Mapeei a disparidade entre requisitos técnicos e realidade salarial usando um dataset de 2.000 registros.</p>
+                </div>
+                <div class="step">
+                    <span>02</span>
+                    <h3>Metodologia</h3>
+                    <p>Apliquei EDA (Análise Exploratória) e normalização de dados para validar o impacto do modelo Remote-First no mundo.</p>
+                </div>
+            </div>
+            <div class="narrative-col">
+                <div class="step">
+                    <span>03</span>
+                    <h3>Insights Estratégicos</h3>
+                    <p>Profissionais com Python + SQL faturam 35% mais. O trabalho remoto domina 65% das vagas de alto nível, eliminando fronteiras.</p>
+                </div>
+                <div class="step highlighted">
+                    <h3>Conclusão</h3>
+                    <p>Dados são o passaporte para o mundo. O storytelling com dados é o que diferencia o profissional médio do talento de elite.</p>
+                </div>
+            </div>
+        </div>
 
-    // Gráfico 1: IBGE (Polar Area)
-    new Chart(document.getElementById('ibgeChart'), {
-        type: 'polarArea',
-        data: {
-            labels: ['Sudeste', 'Sul', 'Nordeste', 'Centro-Oeste', 'Norte'],
-            datasets: [{
-                data: [42, 14, 27, 8, 9],
-                backgroundColor: ['#007bff', '#6c757d', '#343a40', '#adb5bd', '#e9ecef']
-            }]
-        },
-        options: { plugins: { legend: { display: false } } }
-    });
+        <div class="dashboard-card">
+            <div class="kpi-row">
+                <div class="kpi"><strong>R$ 7.500</strong><span>Média Salarial</span></div>
+                <div class="kpi"><strong>85%</strong><span>Demanda Python</span></div>
+                <div class="kpi"><strong>65%</strong><span>Vagas Remotas</span></div>
+            </div>
+            <div class="chart-box">
+                <canvas id="salaryChart"></canvas>
+            </div>
+        </div>
+    </section>
+</main>
 
-    // Gráfico 2: Performance (Line)
-    new Chart(document.getElementById('performanceChart'), {
-        type: 'line',
-        data: {
-            labels: ['00s', '10s', '20s', '30s', '40s', '50s'],
-            datasets: [{
-                label: 'Latência (ms)',
-                data: [45, 42, 80, 38, 41, 35],
-                borderColor: '#007bff',
-                tension: 0.4,
-                fill: true,
-                backgroundColor: 'rgba(0, 123, 255, 0.1)'
-            }]
-        }
-    });
+<footer class="footer">
+    <div class="container">
+        <p>© 2024 Eduarda Soares. Crafted for Impact.</p>
+    </div>
+</footer>
 
-    // Gráfico 3: Growth (Bar)
-    new Chart(document.getElementById('growthChart'), {
-        type: 'bar',
-        data: {
-            labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-            datasets: [{
-                label: 'TB Processados',
-                data: [150, 280, 410, 600],
-                backgroundColor: '#1a1a1a'
-            }]
-        }
-    });
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
