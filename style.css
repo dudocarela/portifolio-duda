@@ -89,3 +89,44 @@ h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.5rem, 5vw,
     .about-grid, .narrative-grid, .kpi-row { grid-template-columns: 1fr; gap: 40px; }
     .container { padding: 0 25px; }
 }
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .narrative-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 30px;
+    }
+
+    .kpi-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
