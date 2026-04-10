@@ -1,144 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eduarda Soares | Data Science</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduarda Soares | Data Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Eduarda Soares</h1>
-  <p class="subtitle">
-    Transformo dados complexos em decisões estratégicas através de análise, modelagem e visualização.
-  </p>
+<header class="navbar">
+    <div class="container nav-content">
+        <div class="logo">EDUARDA<span>SOARES</span></div>
+        <nav>
+            <a href="#sobre">Jornada</a>
+            <a href="#projeto-mercado">Insights</a>
+            <a href="#projeto-simulador">Simulação</a>
+            <a href="#contato" class="nav-btn">Contato</a>
+        </nav>
+    </div>
 </header>
 
-<section id="about">
-  <h2>Sobre mim</h2>
-  <p>
-    Minha atuação em tecnologia é guiada pela capacidade de transformar dados em conhecimento aplicado.
-    Como estudante de Ciência da Computação com foco em Ciência de Dados, desenvolvo soluções que vão além da análise superficial,
-    buscando compreender padrões, gerar insights e apoiar decisões estratégicas.
-  </p>
+<main>
 
-  <p>
-    Ao longo da minha formação, venho consolidando habilidades em análise exploratória, modelagem de dados e construção de interfaces
-    interativas, sempre com foco na clareza da informação e no impacto real das soluções desenvolvidas.
-  </p>
-</section>
+    <!-- HERO -->
+    <section class="hero container">
+        <div class="hero-inner">
+            <span class="eyebrow">Data Science & Modeling</span>
+            <h1>Extraindo valor de dados para <br><span class="gradient-text">impacto global.</span></h1>
+            <p class="hero-desc">
+                Minha abordagem combina análise, modelagem e visão estratégica para transformar dados em ativos de decisão.
+                Busco compreender não apenas os números, mas os sistemas por trás deles.
+            </p>
+            <div class="cta-group">
+                <a href="#projeto-mercado" class="btn btn-filled">Explorar Projeto</a>
+                <a href="#sobre" class="btn btn-outline">Minha Visão</a>
+            </div>
+        </div>
+    </section>
 
-<section id="projects">
-  <h2>Projetos Interativos</h2>
+    <!-- SOBRE -->
+    <section id="sobre" class="container section-spacer">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title">A Ambição por Trás dos Dados</h2>
 
-  <!-- PROJETO 1 -->
-  <div class="project">
-    <h3>📊 Simulador de Carreira em Tecnologia</h3>
+                <p>
+                    Minha trajetória começou com uma inquietação: entender como dados influenciam decisões em larga escala.
+                    Com o tempo, essa curiosidade evoluiu para um foco claro em Ciência de Dados e Modelagem.
+                </p>
 
-    <p><strong>Contexto</strong></p>
-    <p>
-      O crescimento profissional na área de tecnologia está diretamente ligado a decisões estratégicas ao longo do tempo.
-      No entanto, muitos profissionais iniciantes possuem dificuldade em visualizar como suas escolhas impactam sua evolução.
-    </p>
+                <p>
+                    Hoje, trabalho no desenvolvimento de uma mentalidade analítica capaz de transformar dados brutos em
+                    estruturas interpretáveis, conectando informação técnica com impacto estratégico.
+                </p>
 
-    <p><strong>Problema</strong></p>
-    <p>
-      A ausência de ferramentas que traduzam trajetórias profissionais em dados visuais dificulta o planejamento de carreira
-      e a compreensão de oportunidades dentro do mercado.
-    </p>
+                <p>
+                    Meu objetivo é atuar em ambientes globais de tecnologia, contribuindo com soluções orientadas a dados
+                    que sejam escaláveis, eficientes e alinhadas com decisões de alto nível.
+                </p>
+            </div>
 
-    <p><strong>Solução</strong></p>
-    <p>
-      Desenvolvi um simulador interativo que permite selecionar diferentes cargos e visualizar a progressão salarial ao longo dos níveis de experiência.
-      A solução transforma dados em uma narrativa visual clara, facilitando a compreensão da evolução profissional.
-    </p>
+            <div class="about-cards">
+                <div class="stat-box">
+                    <strong>GLOBAL</strong>
+                    <p>Foco em atuação internacional e ambientes de alta performance.</p>
+                </div>
+                <div class="stat-box">
+                    <strong>ANÁLISE</strong>
+                    <p>Transformação de dados em decisões estratégicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p><strong>Resultado</strong></p>
-    <p>
-      Através da visualização, é possível identificar padrões consistentes de crescimento e comparar trajetórias, permitindo decisões mais informadas.
-      O projeto demonstra como dados podem ser utilizados como ferramenta estratégica de planejamento.
-    </p>
+    <!-- PROJETO PRINCIPAL -->
+    <section id="projeto-mercado" class="container section-spacer project-reveal">
+        <header class="project-header">
+            <span class="eyebrow">Case Study</span>
+            <h2 class="project-title">Mercado Tech: Uma Abordagem Analítica sobre Empregabilidade</h2>
+        </header>
 
-    <p><strong>Interação</strong></p>
-    <select id="careerSelect">
-      <option value="0">Data Analyst</option>
-      <option value="1">Data Scientist</option>
-      <option value="2">Software Engineer</option>
-      <option value="3">ML Engineer</option>
-    </select>
+        <div class="narrative-grid">
 
-    <canvas id="careerChart"></canvas>
-  </div>
+            <div class="narrative-col">
+                <div class="step">
+                    <span>01</span>
+                    <h3>Contexto e Problema</h3>
+                    <p>
+                        O mercado de tecnologia apresenta alta demanda, porém com grande assimetria de informação.
+                        Profissionais muitas vezes não conseguem visualizar claramente o impacto de habilidades específicas em sua valorização.
+                    </p>
+                </div>
 
-  <!-- PROJETO 2 -->
-  <div class="project">
-    <h3>🧠 Analisador de Perfil Profissional</h3>
+                <div class="step">
+                    <span>02</span>
+                    <h3>Metodologia</h3>
+                    <p>
+                        Estruturei um dataset com múltiplas variáveis relevantes, aplicando análise exploratória e
+                        padronização para identificar relações entre habilidades, localização e remuneração.
+                    </p>
+                </div>
+            </div>
 
-    <p><strong>Contexto</strong></p>
-    <p>
-      A escolha de carreira na tecnologia envolve múltiplas variáveis, como habilidades técnicas, afinidade com dados e interesse por negócio.
-    </p>
+            <div class="narrative-col">
+                <div class="step">
+                    <span>03</span>
+                    <h3>Insights Estratégicos</h3>
+                    <p>
+                        A análise revelou que combinações específicas de habilidades aumentam significativamente o valor de mercado,
+                        enquanto o modelo remoto redefine completamente as barreiras geográficas.
+                    </p>
+                </div>
 
-    <p><strong>Problema</strong></p>
-    <p>
-      Muitos iniciantes não possuem clareza sobre qual área seguir, o que pode levar a decisões desalinhadas com seu perfil.
-    </p>
+                <div class="step highlighted">
+                    <h3>Conclusão</h3>
+                    <p>
+                        Dados não apenas descrevem o mercado — eles permitem navegar por ele.
+                        A capacidade de interpretar essas informações se torna um diferencial competitivo decisivo.
+                    </p>
+                </div>
+            </div>
 
-    <p><strong>Solução</strong></p>
-    <p>
-      Criei um sistema interativo que analisa combinações de habilidades e sugere caminhos profissionais coerentes,
-      utilizando lógica condicional para gerar recomendações.
-    </p>
+        </div>
 
-    <p><strong>Resultado</strong></p>
-    <p>
-      O sistema fornece feedback imediato e orientado, ajudando na tomada de decisão e demonstrando a aplicação prática de lógica em problemas reais.
-    </p>
+        <div class="dashboard-card">
+            <div class="kpi-row">
+                <div class="kpi"><strong>R$ 7.500</strong><span>Média Salarial</span></div>
+                <div class="kpi"><strong>85%</strong><span>Demanda Python</span></div>
+                <div class="kpi"><strong>65%</strong><span>Vagas Remotas</span></div>
+            </div>
+            <div class="chart-box">
+                <canvas id="salaryChart"></canvas>
+            </div>
+        </div>
+    </section>
 
-    <p><strong>Interação</strong></p>
-    <label><input type="checkbox" value="data"> Dados</label>
-    <label><input type="checkbox" value="code"> Programação</label>
-    <label><input type="checkbox" value="business"> Negócio</label>
+    <!-- NOVO PROJETO INTERATIVO (SEM QUEBRAR VISUAL) -->
+    <section id="projeto-simulador" class="container section-spacer">
+        <header class="project-header">
+            <span class="eyebrow">Interactive System</span>
+            <h2 class="project-title">Simulador de Evolução Profissional</h2>
+        </header>
 
-    <button onclick="analisarPerfil()">Analisar</button>
-    <p id="resultadoPerfil"></p>
-  </div>
+        <p style="max-width:700px; margin:auto; text-align:center; color:#5A5A5A;">
+            Este sistema simula a progressão de carreira com base em diferentes áreas da tecnologia,
+            permitindo visualizar como decisões impactam crescimento salarial ao longo do tempo.
+        </p>
 
-  <!-- PROJETO 3 -->
-  <div class="project">
-    <h3>📈 Dashboard de Análise Salarial</h3>
+        <div class="dashboard-card" style="margin-top:40px;">
+            <div style="text-align:center; margin-bottom:20px;">
+                <select id="careerSelect">
+                    <option value="0">Data Analyst</option>
+                    <option value="1">Data Scientist</option>
+                    <option value="2">Software Engineer</option>
+                    <option value="3">ML Engineer</option>
+                </select>
+            </div>
 
-    <p><strong>Contexto</strong></p>
-    <p>
-      O mercado de tecnologia apresenta grande variação salarial entre cargos e especializações,
-      tornando essencial a análise comparativa para entendimento estratégico.
-    </p>
+            <div class="chart-box">
+                <canvas id="careerChart"></canvas>
+            </div>
+        </div>
+    </section>
 
-    <p><strong>Problema</strong></p>
-    <p>
-      Sem visualizações adequadas, dados salariais tornam-se difíceis de interpretar e pouco úteis para decisões.
-    </p>
+</main>
 
-    <p><strong>Solução</strong></p>
-    <p>
-      Desenvolvi um dashboard interativo utilizando visualização gráfica, permitindo comparar salários médios de diferentes funções.
-    </p>
-
-    <p><strong>Resultado</strong></p>
-    <p>
-      A visualização facilita a identificação de tendências e diferenças relevantes,
-      demonstrando como dados estruturados podem gerar insights claros e acionáveis.
-    </p>
-
-    <p><strong>Interação</strong></p>
-    <canvas id="mainChart"></canvas>
-  </div>
-
-</section>
-
-<footer>
-  <p>© 2026 - Eduarda Soares</p>
+<footer class="footer">
+    <div class="container">
+        <p>© 2024 Eduarda Soares. Crafted for Impact.</p>
+    </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
