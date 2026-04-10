@@ -1,36 +1,79 @@
-window.onload = function() {
-    const canvas = document.getElementById('salaryChart');
-    if (!canvas) return;
+// Inicialização dos Gráficos
+document.addEventListener('DOMContentLoaded', () => {
+    initCharts();
+    handleScrollReveal();
+});
 
-    const ctx = canvas.getContext('2d');
-    
-    // Gradiente para as barras
-    const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-    gradient.addColorStop(0, '#2B2B2B');
-    gradient.addColorStop(1, '#6A6A6A');
+function initCharts() {
+    const ctxRadar = document.getElementById('radarChart').getContext('2d');
+    const ctxLine = document.getElementById('lineChart').getContext('2d');
 
-    new Chart(ctx, {
-        type: 'bar',
+    // Estilo Global dos Gráficos
+    Chart.defaults.color = '#888';
+    Chart.defaults.font.family = 'JetBrains Mono';
+
+    new Chart(ctxRadar, {
+        type: 'radar',
         data: {
-            labels: ['Analista Jr', 'Cientista Pl', 'ML Engineer', 'Arquiteto'],
+            labels: ['Eng. Dados', 'Backend', 'Sistemas', 'DevOps', 'Frontend'],
             datasets: [{
-                label: 'Salário Médio (BRL)',
-                data: [5800, 9500, 14200, 16500],
-                backgroundColor: gradient,
-                borderRadius: 8,
-                barThickness: 45
+                label: 'Score Técnico',
+                data: [95, 90, 85, 80, 70],
+                borderColor: '#00f2ff',
+                backgroundColor: 'rgba(0, 242, 255, 0.1)',
+                borderWidth: 2
             }]
         },
         options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                y: { beginAtZero: true, grid: { color: '#F0F0F0' }, border: {display: false} },
-                x: { grid: { display: false } }
-            }
+            scales: { r: { grid: { color: '#222' }, angleLines: { color: '#222' }, ticks: { display: false } } },
+            plugins: { legend: { display: false } }
         }
     });
-};
+
+    new Chart(ctxLine, {
+        type: 'line',
+        data: {
+            labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+            datasets: [{
+                data: [20, 25, 45, 30, 22, 18],
+                borderColor: '#00f2ff',
+                tension: 0.4,
+                pointRadius: 0
+            }]
+        },
+        options: {
+            scales: { x: { display: false }, y: { grid: { color: '#111' } } },
+            plugins: { legend: { display: false } }
+        }
+    });
+}
+
+// Lógica de Revelação ao Rolar (Scroll Reveal)
+function handleScrollReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(reveal => observer.observe(reveal));
+}
+
+// Efeito de Typing no terminal
+const terminal = document.querySelector('.terminal');
+let text = terminal.innerHTML;
+terminal.innerHTML = '';
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        terminal.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 5);
+    }
+}
+setTimeout(typeWriter, 500);
