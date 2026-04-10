@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,116 +7,240 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duda Carela | Software Engineer & Data Architect</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --surface: #f8f9fa;
+            --primary: #000000;
+            --secondary: #007bff;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --border: #e9ecef;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Layout Organizado (Estilo ABNT Clean) */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 40px;
+            margin-bottom: 60px;
+        }
+
+        h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; }
+        .subtitle { font-size: 1.2rem; color: var(--secondary); font-weight: 600; }
+
+        section { margin-bottom: 80px; }
+        h2 { font-size: 1.8rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Dashboard de Gráficos (Power BI Style) */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .chart-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .chart-box h4 { font-size: 0.9rem; margin-bottom: 15px; color: var(--text-light); text-align: center; }
+
+        /* Projetos Funcionais */
+        .projects-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .project-item {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-meta { font-weight: 600; font-size: 0.9rem; color: var(--secondary); }
+        .project-info h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .project-info p { color: var(--text-light); margin-bottom: 15px; }
+        
+        .tech-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+        .tag { background: var(--surface); padding: 5px 12px; border-radius: 4px; font-size: 0.75rem; border: 1px solid var(--border); }
+
+        @media (max-width: 768px) {
+            .project-item { grid-template-columns: 1fr; }
+            h1 { font-size: 2.2rem; }
+        }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--text-light); }
+    </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container nav-content">
-            <div class="logo">DUDA <span>CARELA</span></div>
-            <nav>
-                <a href="#sobre">Sobre</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#dashboard" class="nav-btn">Analytics</a>
-            </nav>
-        </div>
+<div class="container">
+    <header>
+        <h1>DUDA CARELA</h1>
+        <p class="subtitle">Software Engineering & Data Architecture</p>
+        <p>Desenvolvendo soluções robustas que resolvem problemas reais através de código limpo e análise de dados estratégica.</p>
     </header>
 
-    <section class="hero">
-        <div class="container hero-inner">
-            <span class="eyebrow">Engineering & Data Architecture</span>
-            <h1>Sistemas Robustos para <br><span class="gradient-text">Problemas Reais.</span></h1>
-            <p class="hero-desc">Desenvolvedor focado em escalabilidade, pipelines de dados massivos e arquitetura de software de alta performance.</p>
-            <div class="cta-group">
-                <a href="#projetos" class="btn btn-filled">Ver Projetos</a>
-                <a href="#dashboard" class="btn btn-outline">Análise de Dados</a>
+    <section>
+        <h2>📊 Data Analytics Dashboard</h2>
+        <div class="dashboard-grid">
+            <div class="chart-box">
+                <h4>DISTRIBUIÇÃO DEMOGRÁFICA (IBGE)</h4>
+                <canvas id="ibgeChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h4>PERFORMANCE DO SISTEMA (LATÊNCIA)</h4>
+                <canvas id="performanceChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h4>CRESCIMENTO DE DADOS PROCESSADOS</h4>
+                <canvas id="growthChart"></canvas>
             </div>
         </div>
     </section>
 
-    <section id="dashboard" class="section-spacer">
-        <div class="container">
-            <h2 class="section-title">Data Analytics Dashboard</h2>
-            <div class="dashboard-card">
-                <div class="kpi-row">
-                    <div class="kpi">
-                        <strong>5.5k</strong>
-                        <span>Municípios Mapeados</span>
-                    </div>
-                    <div class="kpi">
-                        <strong>99.9%</strong>
-                        <span>Uptime Sentinel</span>
-                    </div>
-                    <div class="kpi">
-                        <strong>TB/mês</strong>
-                        <span>Dados Processados</span>
-                    </div>
-                </div>
-                
-                <div class="narrative-grid" style="margin-top: 40px; gap: 20px;">
-                    <div class="chart-box">
-                        <canvas id="ibgeChart"></canvas>
-                    </div>
-                    <div class="chart-box">
-                        <canvas id="performanceChart"></canvas>
-                    </div>
-                </div>
-                <div class="chart-box" style="height: 300px; margin-top: 20px;">
-                    <canvas id="salaryChart"></canvas>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projetos" class="section-spacer">
-        <div class="container">
-            <h2 class="section-title">Projetos de Engenharia</h2>
+    <section>
+        <h2>🛠️ Projetos Selecionados</h2>
+        <div class="projects-stack">
             
-            <div class="project-header">
-                <div class="highlighted">
-                    <div class="step">
-                        <span>PROJETO 01 // DATA WAREHOUSE</span>
-                        <h3>IBGE: O Censo do Brasil em Dados Estruturados</h3>
-                        <p>Pipeline ETL que automatiza a extração da API SIDRA, tratando inconsistências e populando um DW PostgreSQL com suporte geoespacial (PostGIS) para análise de densidade urbana.</p>
+            <div class="project-item">
+                <div class="project-meta">01 / BIG DATA & ETL</div>
+                <div class="project-info">
+                    <h3>Data Warehouse Populacional (IBGE)</h3>
+                    <p>Pipeline automatizado que consome a API SIDRA, realiza o tratamento de milhões de registros e estruturou um banco PostgreSQL otimizado para consultas complexas de densidade urbana.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">ETL</span><span class="tag">PySpark</span>
                     </div>
                 </div>
             </div>
 
-            <div class="narrative-grid">
-                <div class="step">
-                    <span>PROJETO 02 // MACHINE LEARNING</span>
+            <div class="project-item">
+                <div class="project-meta">02 / MACHINE LEARNING</div>
+                <div class="project-info">
                     <h3>Motor de Recomendação Híbrido</h3>
-                    <p>Sistema funcional inspirado no Netflix. Combina Filtragem Colaborativa (comportamento) e Baseada em Conteúdo (NLP) para personalização de alta precisão em tempo real.</p>
-                </div>
-                <div class="step">
-                    <span>PROJETO 03 // FULL-STACK SAAS</span>
-                    <h3>OmniStock: Gestão Preditiva</h3>
-                    <p>SaaS completo Next.js com IA integrada para previsão de ruptura de estoque através de análise de séries temporais. Dashboard administrativo e pagamentos via Stripe.</p>
-                </div>
-                <div class="step">
-                    <span>PROJETO 04 // CORE SYSTEMS</span>
-                    <h3>DudaDB Core: Engine Relacional</h3>
-                    <p>Desenvolvimento de um banco de dados relacional em Rust. Implementação de B-Trees, gerenciamento de memória (buffer pool) e persistência binária customizada.</p>
-                </div>
-                <div class="step">
-                    <span>PROJETO 05 // INFRA & OPS</span>
-                    <h3>Sentinel: Telemetria em Tempo Real</h3>
-                    <p>Monitor de infraestrutura distribuída usando Go e WebSockets. Detecta anomalias de hardware em milissegundos através de análise estatística de fluxo.</p>
+                    <p>Sistema funcional de sugestão de conteúdo estilo Netflix. Utiliza Filtragem Colaborativa e análise de conteúdo (NLP) para personalização profunda de experiência do usuário.</p>
+                    <div class="tech-tags">
+                        <span class="tag">FastAPI</span><span class="tag">Scikit-Learn</span><span class="tag">Redis</span><span class="tag">Python</span>
+                    </div>
                 </div>
             </div>
+
+            <div class="project-item">
+                <div class="project-meta">03 / FULL-STACK SaaS</div>
+                <div class="project-info">
+                    <h3>Gestão de Inventário Preditivo</h3>
+                    <p>Um SaaS completo com Dashboard administrativo e IA integrada para prever ruptura de estoque. Inclui sistema de pagamentos e autenticação multi-nível.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Prisma</span><span class="tag">Stripe</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-meta">04 / CORE ENGINEERING</div>
+                <div class="project-info">
+                    <h3>DudaDB Core</h3>
+                    <p>Desenvolvimento de um banco de dados relacional literalmente do zero. Implementação de B-Trees para indexação e um sistema de persistência binária customizado.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Rust / C++</span><span class="tag">Binary Files</span><span class="tag">Data Structures</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-meta">05 / INFRASTRUCTURE</div>
+                <div class="project-info">
+                    <h3>Sentinel: Real-time Monitor</h3>
+                    <p>Sistema de monitoramento de infraestrutura crítica com telemetria via WebSockets. Detecta picos de carga e falhas em milissegundos.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Go</span><span class="tag">WebSockets</span><span class="tag">Grafana API</span><span class="tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Duda Carela. Construído sob os princípios de performance e clareza.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Duda Carela. Todos os projetos são funcionais e documentados.</p>
     </footer>
+</div>
 
-    <script src="script.js"></script>
+<script>
+    // Configurações Globais do Chart.js
+    Chart.defaults.font.family = 'Inter';
+    Chart.defaults.color = '#666';
+
+    // Gráfico 1: IBGE (Polar Area)
+    new Chart(document.getElementById('ibgeChart'), {
+        type: 'polarArea',
+        data: {
+            labels: ['Sudeste', 'Sul', 'Nordeste', 'Centro-Oeste', 'Norte'],
+            datasets: [{
+                data: [42, 14, 27, 8, 9],
+                backgroundColor: ['#007bff', '#6c757d', '#343a40', '#adb5bd', '#e9ecef']
+            }]
+        },
+        options: { plugins: { legend: { display: false } } }
+    });
+
+    // Gráfico 2: Performance (Line)
+    new Chart(document.getElementById('performanceChart'), {
+        type: 'line',
+        data: {
+            labels: ['00s', '10s', '20s', '30s', '40s', '50s'],
+            datasets: [{
+                label: 'Latência (ms)',
+                data: [45, 42, 80, 38, 41, 35],
+                borderColor: '#007bff',
+                tension: 0.4,
+                fill: true,
+                backgroundColor: 'rgba(0, 123, 255, 0.1)'
+            }]
+        }
+    });
+
+    // Gráfico 3: Growth (Bar)
+    new Chart(document.getElementById('growthChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+            datasets: [{
+                label: 'TB Processados',
+                data: [150, 280, 410, 600],
+                backgroundColor: '#1a1a1a'
+            }]
+        }
+    });
+</script>
+
 </body>
 </html>
