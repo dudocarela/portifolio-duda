@@ -1,4 +1,3 @@
-````md
 # Eduarda Soares de Paiva | PortfolioHUB
 
 <div align="center">
@@ -81,17 +80,15 @@ O GitHub foi utilizado como plataforma principal para:
 
 ### Fluxo de Implantação
 
-```text
-Desenvolvimento Local
-        ↓
-      Git
-        ↓
-     GitHub
-        ↓
- GitHub Pages
-        ↓
- Site Publicado
-````
+Desenvolvimento Local  
+⬇  
+Git  
+⬇  
+GitHub  
+⬇  
+GitHub Pages  
+⬇  
+Site Publicado
 
 ---
 
@@ -117,12 +114,12 @@ Para garantir maior segurança durante o desenvolvimento e manutenção do proje
 
 Durante a implantação do PortfolioHUB, o Google Gemini foi utilizado como ferramenta de apoio para:
 
-* Planejamento da implantação
-* Sugestões de melhorias
-* Boas práticas de segurança
-* Estruturação da documentação
-* Apoio técnico durante o desenvolvimento
-* Solução de dúvidas relacionadas ao projeto
+- Planejamento da implantação
+- Sugestões de melhorias
+- Boas práticas de segurança
+- Estruturação da documentação
+- Apoio técnico durante o desenvolvimento
+- Solução de dúvidas relacionadas ao projeto
 
 A utilização da Inteligência Artificial contribuiu para aumentar a produtividade e auxiliar na tomada de decisões durante o desenvolvimento.
 
@@ -130,11 +127,11 @@ A utilização da Inteligência Artificial contribuiu para aumentar a produtivid
 
 ## 📈 Objetivos Profissionais
 
-* 📊 Crescer na área de Ciência de Dados
-* 🧠 Aprimorar habilidades em análise e programação
-* 💼 Desenvolver projetos reais e profissionais
-* 🚀 Construir um portfólio forte e competitivo
-* 📚 Buscar aprendizado contínuo
+- 📊 Crescer na área de Ciência de Dados
+- 🧠 Aprimorar habilidades em análise e programação
+- 💼 Desenvolver projetos reais e profissionais
+- 🚀 Construir um portfólio forte e competitivo
+- 📚 Buscar aprendizado contínuo
 
 ---
 
@@ -162,13 +159,9 @@ A utilização da Inteligência Artificial contribuiu para aumentar a produtivid
 
 ## 📬 Contato
 
-<div>
-
-* 💼 LinkedIn: [www.linkedin.com/in/eduarda-soares-de-paiva-95567b324](http://www.linkedin.com/in/eduarda-soares-de-paiva-95567b324)
-* 📧 Email: [dudasoaresdepaiva@gmail.com](mailto:dudasoaresdepaiva@gmail.com)
-* 💻 GitHub: https://github.com/dudocarela
-
-</div>
+- 💼 LinkedIn: www.linkedin.com/in/eduarda-soares-de-paiva-95567b324
+- 📧 Email: dudasoaresdepaiva@gmail.com
+- 💻 GitHub: https://github.com/dudocarela
 
 ---
 
@@ -181,4 +174,3 @@ A utilização da Inteligência Artificial contribuiu para aumentar a produtivid
 **PortfolioHUB • Ciência de Dados • 2026**
 
 </div>
-```
