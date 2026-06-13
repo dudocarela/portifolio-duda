@@ -1,8 +1,9 @@
-# Eduarda Soares de Paiva | Portfólio Profissional
+````md
+# Eduarda Soares de Paiva | PortfolioHUB
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:06B6D4&height=180&section=header&text=Portfólio%20Eduarda%20Soares&fontSize=35&fontColor=ffffff" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:06B6D4&height=180&section=header&text=PortfolioHUB%20Eduarda%20Soares&fontSize=35&fontColor=ffffff" />
 
 </div>
 
@@ -20,7 +21,15 @@
 
 ---
 
-## 👩‍💻 Sobre mim
+## 📌 Sobre o Projeto
+
+O **PortfolioHUB** é uma plataforma desenvolvida para centralizar e apresentar projetos acadêmicos, profissionais e atividades desenvolvidas ao longo da minha formação.
+
+O projeto foi implantado utilizando **Git**, **GitHub** e **GitHub Pages**, permitindo controle de versão, hospedagem online e compartilhamento de conteúdo de forma organizada e segura.
+
+---
+
+## 👩‍💻 Sobre Mim
 
 Sou **Eduarda Soares de Paiva**, estudante de **Ciência de Dados**, com foco em análise, organização e visualização de dados.
 
@@ -43,12 +52,111 @@ Tenho experiência prática com projetos acadêmicos e desenvolvimento de soluç
 
 ---
 
+## 🚀 Funcionalidades do PortfolioHUB
+
+✅ Exibição de projetos acadêmicos
+
+✅ Apresentação profissional online
+
+✅ Organização centralizada de portfólios
+
+✅ Compartilhamento rápido de projetos
+
+✅ Hospedagem utilizando GitHub Pages
+
+✅ Controle de versão através do GitHub
+
+---
+
+## 🔄 Integração com GitHub
+
+O GitHub foi utilizado como plataforma principal para:
+
+- Armazenamento do código-fonte
+- Controle de versões
+- Histórico de alterações
+- Gerenciamento do projeto
+- Compartilhamento de conteúdo
+- Publicação automática via GitHub Pages
+
+### Fluxo de Implantação
+
+```text
+Desenvolvimento Local
+        ↓
+      Git
+        ↓
+     GitHub
+        ↓
+ GitHub Pages
+        ↓
+ Site Publicado
+````
+
+---
+
+## 🔐 Segurança Implementada
+
+Para garantir maior segurança durante o desenvolvimento e manutenção do projeto, foram adotadas as seguintes práticas:
+
+🔒 Controle de acesso via GitHub
+
+🔒 Versionamento seguro do código
+
+🔒 Histórico completo de alterações
+
+🔒 Backup automático na nuvem
+
+🔒 Proteção da conta com autenticação em duas etapas (2FA)
+
+🔒 Controle de modificações através de commits
+
+---
+
+## 🤖 Utilização do Google Gemini
+
+Durante a implantação do PortfolioHUB, o Google Gemini foi utilizado como ferramenta de apoio para:
+
+* Planejamento da implantação
+* Sugestões de melhorias
+* Boas práticas de segurança
+* Estruturação da documentação
+* Apoio técnico durante o desenvolvimento
+* Solução de dúvidas relacionadas ao projeto
+
+A utilização da Inteligência Artificial contribuiu para aumentar a produtividade e auxiliar na tomada de decisões durante o desenvolvimento.
+
+---
+
 ## 📈 Objetivos Profissionais
 
-- 📊 Crescer na área de Ciência de Dados  
-- 🧠 Aprimorar habilidades em análise e programação  
-- 💼 Desenvolver projetos reais e profissionais  
-- 🚀 Construir um portfólio forte e competitivo  
+* 📊 Crescer na área de Ciência de Dados
+* 🧠 Aprimorar habilidades em análise e programação
+* 💼 Desenvolver projetos reais e profissionais
+* 🚀 Construir um portfólio forte e competitivo
+* 📚 Buscar aprendizado contínuo
+
+---
+
+## 📚 Documentação da Implantação
+
+### Etapas Realizadas
+
+✔ Planejamento da implantação
+
+✔ Configuração do GitHub
+
+✔ Integração com GitHub Pages
+
+✔ Controle de versão utilizando Git
+
+✔ Implementação de práticas de segurança
+
+✔ Testes de funcionamento
+
+✔ Publicação do PortfolioHUB
+
+✔ Utilização do Google Gemini como apoio técnico
 
 ---
 
@@ -56,9 +164,9 @@ Tenho experiência prática com projetos acadêmicos e desenvolvimento de soluç
 
 <div>
 
-- 💼 LinkedIn: www.linkedin.com/in/eduarda-soares-de-paiva-95567b324  
-- 📧 Email: dudasoaresdepaiva@gmail.com  
-- 💻 GitHub: https://github.com/dudocarela  
+* 💼 LinkedIn: [www.linkedin.com/in/eduarda-soares-de-paiva-95567b324](http://www.linkedin.com/in/eduarda-soares-de-paiva-95567b324)
+* 📧 Email: [dudasoaresdepaiva@gmail.com](mailto:dudasoaresdepaiva@gmail.com)
+* 💻 GitHub: https://github.com/dudocarela
 
 </div>
 
@@ -68,6 +176,9 @@ Tenho experiência prática com projetos acadêmicos e desenvolvimento de soluç
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,100:4F46E5&height=120&section=footer"/>
 
-Feito com dedicação por **Eduarda Soares de Paiva** 
+### Desenvolvido por Eduarda Soares de Paiva
+
+**PortfolioHUB • Ciência de Dados • 2026**
 
 </div>
+```
